@@ -1,0 +1,13 @@
+FROM kee/nodejs:latest
+
+RUN set -xe \
+&& cd /var/www \
+&& npm install -g vue-cli \
+&& npm install vue-route \
+&& npm install vue-resource \
+&& npm init webpack demo \
+&& npm install
+
+WORKDIR /var/www
+
+CMD ["npm", "run", "dev"]
