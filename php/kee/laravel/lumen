@@ -1,0 +1,13 @@
+FROM kee/php:7.1-fpm
+
+ENV COMPOSER_HOME /root/composer
+ENV COMPOSER_VERSION master
+
+RUN set -xe \
+    && composer global require "laravel/lumen-installer"
+
+RUN ln -s /root/composer/vendor/bin/lumen /usr/bin/lumen
+
+VOLUME ["/app"]
+
+WORKDIR /app

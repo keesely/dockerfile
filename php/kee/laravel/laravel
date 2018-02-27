@@ -1,0 +1,13 @@
+FROM kee/php:7.1-cli
+
+ENV COMPOSER_HOME /root/composer
+ENV COMPOSER_VERSION master
+
+RUN set -xe \
+    && composer global require "laravel/installer"
+
+RUN ln -s /root/composer/vendor/bin/laravel /usr/bin/laravel
+
+VOLUME ["/app"]
+
+WORKDIR /app
