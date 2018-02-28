@@ -12,6 +12,7 @@ RUN set -xe \
 && dnf clean all \
 && mkdir -p /app
 
+COPY config/ssh /root/.ssh
 COPY config/vim /root/.vim
 COPY config/tmux /root/.tmux
 COPY config/vimrc /root/.vimrc
