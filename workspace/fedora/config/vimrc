@@ -450,10 +450,6 @@ Bundle 'SudoEdit.vim'
 Bundle 'EasyGrep'
 Bundle 'VOoM'
 Bundle 'VimIM'
-"..................................
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-"......................................
 filetype plugin indent on
 "执行PHP语法检查
 "let g:zcaprg = "~/public/ZendCodeAnalyzer"
